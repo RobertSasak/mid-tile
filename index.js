@@ -25,7 +25,7 @@ function build(name, meta, fn) {
 
     var tiles = [];
 
-    _.extend(meta, defaultInfo);
+    meta = _.extend(defaultInfo, meta);
 
     for (var z = meta.minzoom; z <= meta.maxzoom; z++) {
         var tl = pxTile(sph.px([meta.bounds[0], meta.bounds[1]], z));
